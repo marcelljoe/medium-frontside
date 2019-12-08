@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
     height: 'auto',
-    width: '950px',
+    width: 'auto',
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
