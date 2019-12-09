@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import ls from 'local-storage';
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Container, Form, Input, Grid, Image, Button, Header, Icon, Modal} from 'semantic-ui-react';
@@ -71,7 +70,8 @@ export default class Login extends Component{
 
     render(){
         return (
-            <Modal trigger={<Button>Login</Button>} size="small" closeIcon>
+            
+            <Modal trigger={<Button floated="right">Login</Button>} size="small" closeIcon>
                 <div class="ui form">
                     <br/>
                         <div align="center">

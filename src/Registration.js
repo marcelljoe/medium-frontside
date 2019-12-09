@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import {Form, Input, Grid, Image, Button, Header, Icon, Modal} from 'semantic-ui-react';
+import Login from './Login';
 import './App.css';
 
 const columns = _.times(16, (i) => (
@@ -17,7 +19,7 @@ const GridExampleGrid = () =>
 export default class Registration extends Component{
     render(){
         return (
-            <Modal trigger={<Button>Register</Button>} size="medium">
+            <Modal trigger={<Button floated="right">Register</Button>} size="medium">
                 
                 <Grid columns={3} verticalAlign="top">
                     <Grid.Row>
@@ -45,7 +47,7 @@ export default class Registration extends Component{
                             <Button color="black" size="small">Register</Button>
                         </Form.Field>
                         <Form.Field align="center">
-                            <h4>Already have an Account? <a href="###">Sign In</a></h4>
+                            <h4>Already have an Account? <a href="/Login">Sign In</a></h4>
                             <h4>To make Medium work, we log user data and share it with service providers. Click “Sign Up” above to accept Medium’s<a href="###">Terms of Service</a>&<a href="###">Privacy Policy</a></h4>
                         </Form.Field>
                         </Form>
