@@ -14,7 +14,7 @@ const InputExampleInput = () => <Input placeholder=""/>
 const GridExampleGrid = () => 
 <Grid>{columns}</Grid>
 
-class Registration extends Component{
+export default class Registration extends Component{
     render(){
         return (
             <Modal trigger={<Button>Register</Button>} size="medium">
@@ -62,4 +62,3 @@ class Registration extends Component{
     }
     }
 
-    export default Registration;
