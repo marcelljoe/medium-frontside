@@ -19,7 +19,7 @@ class Registration extends Component{
         return (
             <Modal trigger={<Button>Register</Button>} size="medium">
                 
-                <Grid columns={3} divided verticalAlign="top">
+                <Grid columns={3} verticalAlign="top">
                     <Grid.Row>
                     <Grid.Column>
                         <Image floated="left" verticalAlign="top" src='https://miro.medium.com/max/214/1*MQH4A5bsyRz4AWh5V4IfvQ.png' />
