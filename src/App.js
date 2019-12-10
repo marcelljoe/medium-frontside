@@ -7,16 +7,6 @@ import Registration from './Registration';
 import Home from './Home';
 import Login from './Login';
 
-ReactDOM.render(
-    <Router>
-      <Switch>
-        <Route exact path ="/" component={Registration} />
-        <Route path ="/Login" component={Login} />
-        <Route path ="/Registration" component={Registration} />
-      </Switch>
-    </Router>,
-    document.getElementById("root"));
-
 export default class App extends Component {
   render(){
   return (

@@ -20,7 +20,6 @@ export default class Registration extends Component{
     render(){
         return (
             <Modal trigger={<Button floated="right">Register</Button>} size="medium">
-                
                 <Grid columns={3} verticalAlign="top">
                     <Grid.Row>
                     <Grid.Column>
