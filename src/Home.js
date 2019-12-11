@@ -52,9 +52,8 @@ export default class Home extends Component {
 
         return (
             <div>
-            <Container>
-                <HomeHeader />
-            </Container>
+                <HomeHeader/>
+                <Container>
             <div style={{position: "sticky", top:"0", backgroundColor: "white", zIndex: "1"}}>
             <Container>
                     <Menu secondary style={{overflowX: "scroll"}}>
@@ -162,6 +161,7 @@ export default class Home extends Component {
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
+            </Container>
         </div>
         );
     }

@@ -39,6 +39,7 @@ export default class HomeHeader extends Component {
         
 
         return(
+            <Container>
             <Menu secondary>
                 <Menu.Item>
                 <Header as='h1'>Medium</Header>
@@ -56,6 +57,7 @@ export default class HomeHeader extends Component {
                 </Menu.Item>
                 </Menu.Menu>  
             </Menu>
-        ); 
+            </Container>
+            ); 
     }
 }

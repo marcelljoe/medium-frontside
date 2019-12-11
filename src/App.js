@@ -6,13 +6,15 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Registration from './Registration';
 import Home from './Home';
 import Login from './Login';
+import OZCategory from './OZCategory';
+import HomeHeader from './HomeHeader';
 
 export default class App extends Component {
   render(){
   return (
-    <Container>
-      <Home />
-    </Container>
+      <div>  
+      <OZCategory />
+      </div>
       
   );
   }
