@@ -4,14 +4,17 @@ import ReactDOM from 'react-dom';
 import {Segment, Rail, Ref, Sticky, Item, Divider, Dropdown, Trigger, Container, Menu, Form, Input, Grid, Image, Button, Header, Icon, Modal, SegmentInline} from 'semantic-ui-react';
 import {FaBell, FaSearch, FaUserCircle} from 'react-icons/fa';
 import './App.css';
+import HomeHeader from './HomeHeader';
 import Items from './CategoryHome';
 import Populars from './CategoryPopular';
 import Rests from './CategoryRest';
+
 
 export default class Home extends Component {
     state = {activateItem: 'none'}
     handleItemClick = (e, {name}) => this.setState({activeItem: name})
 
+    contextRef = createRef()
     render(){
         const {activeItem} = this.state
         const options = [
@@ -38,39 +41,29 @@ export default class Home extends Component {
         const DropdownTriggerExample = () => (
             <Dropdown trigger={trigger} options={options} />
         )
+        
+        const imgHeader = (
+            <Image src="https://medium.com/icons/monogram-mask.svg" style={{width: "35px", height: "35px"}} />
+        )
 
         const trigger = (
             <FaUserCircle name="user"  />
         )
 
-    //    const Placeholder = () => <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
         return (
             <div>
             <Container>
-            <Menu secondary>
-                <Menu.Item>
-                <Header as='h1'>Medium</Header>
-                </Menu.Item>    
-                <Menu.Menu position='right'>
-                <Menu.Item>
-                <FaSearch name="search" onClick={this.handleItemClick} />
-                </Menu.Item>
-                <Menu.Item>
-                <FaBell name="bell" onClick={this.handleItemClick} />
-                </Menu.Item>
-                <Menu.Item>
-                    <Dropdown trigger={trigger} options={options}/>
-                </Menu.Item>
-                </Menu.Menu>  
-            </Menu>
-                <nav>
+                <HomeHeader />
+            </Container>
+            <div style={{position: "sticky", top:"0", backgroundColor: "white", zIndex: "1"}}>
+            <Container>
                     <Menu secondary style={{overflowX: "scroll"}}>
                         {Items.map((MenuItem =>(
                             <Menu.Item name={MenuItem.name} active={activeItem===(MenuItem.name)} onClick={this.handleItemClick}/>
                         )))}
-                    </Menu>
-                </nav>
+                    </Menu>                
             </Container>
+            </div>
             <Grid padded="vertically" divided='vertically'>
                 <Grid.Row columns={3}>
                     <Grid.Column>
@@ -117,14 +110,18 @@ export default class Home extends Component {
                             <p>Will the strategies that have powered S...</p><br/>
                             Eric Ravenscraft in OneZero
                             <p>Dec 10, 7 min read ⋆</p>
+                            <div style={{display: "inlineBlock", textAlign: "right"}}><a href="###" >SEE ALL FEATURED ></a></div>
                         </Grid.Column>
                 </Grid.Row>
-                <div style={{display: "inlineBlock", textAlign: "right"}}><a href="###" >SEE ALL FEATURED ></a></div>
+                
 
                 <Grid.Row columns={3}>
                 <Grid.Column width={6}>
-                <div style={{position: "sticky", top: "0"}}><br/>
-                    <Header as="h3">Popular on Medium</Header>
+                {/* <div style={{position: "sticky", top: "0"}}><br/> */}
+                    <Ref innerRef={this.contextRef}>
+                        <Rail>
+                            <Sticky context={this.contextRef}>
+                            <br/><Header as="h3">Popular on Medium</Header>
                     <Item.Group>
                             {Populars.map((Popular =>(
                             <Item stretched="vertically">
@@ -138,7 +135,12 @@ export default class Home extends Component {
                             </Item>
                             )))} 
                         </Item.Group>
-                        </div>
+
+
+                            </Sticky>
+                        </Rail>
+                    </Ref>
+                        {/* </div> */}
                         </Grid.Column>
                         
                     <Grid.Column width={10}>
