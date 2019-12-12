@@ -7,14 +7,26 @@ import Registration from './Registration';
 import Home from './Home';
 import Login from './Login';
 import OZCategory from './OZCategory';
-import HomeHeader from './HomeHeader';
+import CMTCategory from './CMTCategory';
 
 export default class App extends Component {
   render(){
   return (
-      <div>  
-      <OZCategory />
+
+    <Router>
+      <div>
+        <Route exact path="/" component={OZCategory} />
+        <Route path="/OZCategory" component={OZCategory} />
+        <Route path="/Login" component={Login} />
+        <Route path="/Home" component={Home} />
+        <Route path="/Registration" component={Registration}/>
+        <Route path="/CMTCategory" component={CMTCategory}/>
+        
       </div>
+    </Router>
+      // <div>  
+      // <Home />
+      // </div>
       
   );
   }

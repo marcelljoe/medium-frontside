@@ -3,55 +3,73 @@ import { Component } from "react";
     const Items = [
         {   
             id: '1',
-            name:'HOME'
+            name: 'HOME',
+            url: '/Home'
         },
         {
             id: '2',
-            name:'ONEZERO'
+            name: 'ONEZERO',
+            url: '/OZCategory'
         }, 
         {
             id: '3',
-            name:'ELEMENTAL'
+            name:'ELEMENTAL',
+            url: '/Home'
         },
         {
             id: '4',
-            name:'GEN'
+            name:'GEN',
+            url: '/Home'
         },
         {
             id: '5',
-            name:'ZORA'
+            name:'ZORA',
+            url: '/Home'
         }, 
         {
             id: '6',
-            name:'FORGE'
+            name:'FORGE',
+            url: '/Home'
         }, 
         {
             id: '7',
-            name:'HUMAN PARTS'
+            name:'HUMAN PARTS',
+            url: '/Home'
         }, 
         {
             id: '8',
-            name:'MARKER'
+            name:'MARKER',
+            url: '/Home'
         }, 
         {
             id: '9',
-            name:'LEVEL'
+            name:'LEVEL',
+            url: '/Home'
         }, 
         {
             id: '10',
-            name:'HEATED'
+            name:'HEATED',
+            url: '/Home'
         }, 
         {
             id: '11',
-            name:'MODUS'},
+            name:'MODUS',
+            url: '/Home'
+        },
         {
             id: '12',
-            name:'MEAN'},
+            name:'LOGIN',
+            url: '/Login'
+        },
         {
             id: '13',
-            name:'MEDIAN'},
+            name:'REGISTER',
+            url: '/Registration'
+        },
         {
             id: '14',     
-            name:'MODAL DOONGGG'}]
+            name:'ANOTHER CAT',
+            url: '/Home'
+        }]
 
 export default Items;

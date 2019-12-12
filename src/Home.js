@@ -8,6 +8,7 @@ import HomeHeader from './HomeHeader';
 import Items from './CategoryHome';
 import Populars from './CategoryPopular';
 import Rests from './CategoryRest';
+import {Link} from 'react-router-dom';
 
 
 export default class Home extends Component {
@@ -57,9 +58,9 @@ export default class Home extends Component {
             <div style={{position: "sticky", top:"0", backgroundColor: "white", zIndex: "1"}}>
             <Container>
                     <Menu secondary style={{overflowX: "scroll"}}>
-                        {Items.map((MenuItem =>(
-                            <Menu.Item name={MenuItem.name} active={activeItem===(MenuItem.name)} onClick={this.handleItemClick}/>
-                        )))}
+                        {Items.map((MenuItem, i) =>(
+                            <Link to={MenuItem.url}><Menu.Item key={i} name={MenuItem.name} active={activeItem===(MenuItem.name)} onClick={this.handleItemClick}></Menu.Item></Link>
+                        ))}
                     </Menu>                
             </Container>
             </div>
@@ -122,9 +123,9 @@ export default class Home extends Component {
                             <Sticky context={this.contextRef}>
                             <br/><Header as="h3">Popular on Medium</Header>
                     <Item.Group>
-                            {Populars.map((Popular =>(
+                            {Populars.map((Popular, i) =>(
                             <Item stretched="vertically">
-                            <Header as="h2" floated="left">{Popular.no}</Header>
+                            <Header as="h2" floated="left" key={i}>{Popular.no}</Header>
                             <Item.Content>
                             <Header as="h4">{Popular.title}</Header>
                                 <Item.Content verticalAlign="bottom">
@@ -132,7 +133,7 @@ export default class Home extends Component {
                                 </Item.Content>
                             </Item.Content>
                             </Item>
-                            )))} 
+                            ))} 
                         </Item.Group>
 
 
@@ -144,9 +145,9 @@ export default class Home extends Component {
                         
                     <Grid.Column width={10}>
                         <Item.Group><br/>
-                            {Rests.map((Rest => (
+                            {Rests.map((Rest, i) => (
                                 <Item stretched="vertically">                            
-                                <Item.Content>
+                                <Item.Content key={i}>
                                 <p>{Rest.tag}</p>
                                 <Header as="h2">{Rest.title}</Header>
                                 <p>{Rest.subtitle}</p>
@@ -156,7 +157,7 @@ export default class Home extends Component {
                                 </Item.Content>
                                 <Item.Image src={Rest.img} style={{height: "150px", width: "150px"}} />
                             </Item>
-                            )))}
+                            ))}
                         </Item.Group>
                     </Grid.Column>
                 </Grid.Row>

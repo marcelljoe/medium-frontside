@@ -1,3 +1,5 @@
+import _ from 'lodash';
+import faker from 'faker';
 import React, {Component, createRef} from 'react';
 import {FaBell, FaSearch, FaUserCircle} from 'react-icons/fa';
 import {Segment, Rail, Ref, Sticky, Item, Divider, Dropdown, Trigger, Container, Menu, Form, Input, Grid, Image, Button, Header, Icon, Modal, SegmentInline} from 'semantic-ui-react';
@@ -47,10 +49,10 @@ export default class HomeHeader extends Component {
                 </Menu.Item>    
                 <Menu.Menu position='right'>
                 <Menu.Item>
-                <FaSearch name="search" onClick={this.handleItemClick} />
+                <Icon name="search"/>
                 </Menu.Item>
                 <Menu.Item>
-                <FaBell name="bell" onClick={this.handleItemClick} />
+                <Icon name="bell"/>
                 </Menu.Item>
                 <Menu.Item>
                     <Dropdown trigger={trigger} options={options}/>
