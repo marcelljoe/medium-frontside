@@ -1,12 +1,13 @@
 import _ from 'lodash';
+import faker from 'faker';
 import React, {Component, createRef} from 'react';
+import {FaBell, FaSearch, FaUserCircle} from 'react-icons/fa';
 import {Segment, Rail, Ref, Sticky, Item, Divider, Dropdown, Trigger, Container, Menu, Form, Input, Grid, Image, Button, Header, Icon, Modal, SegmentInline} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import Avatar from 'react-avatar';
-import Registration from './Registration';
 
 
-export default class HomeHeader extends Component {
+export default class MORGHeader extends Component {
     state = {activateItem: 'none'}
     handleItemClick = (e, {name}) => this.setState({activeItem: name})
 
@@ -15,16 +16,13 @@ export default class HomeHeader extends Component {
             {
             key: 'user',
             text: (
-                <div>
         <Item>    
-            <Avatar name="Marcell Joe" size={40} round="20px" align="left" style={{marginRight: '10px'}} />
+            <Avatar name="Marcell Joe" size={40} round="20px" />
             <Item.Content>
             <strong>Marcell Jonathan</strong>
             <p>@arcljnthn</p>
             </Item.Content>
         </Item> 
-            <p style={{color:"green"}}>Become a member</p>
-        </div>
         ),
         disabled: false,
         },
@@ -51,28 +49,27 @@ export default class HomeHeader extends Component {
         
 
         return(
+            <div style={{boxShadow: '0px 5px 5px rgba(0, 0, 0, .1)'}}>
             <Container>
             <Menu secondary>
                 <Menu.Item>
-                <Link to="/"><Header as='h1' style={{marginLeft:"0px"}}>Medium</Header></Link>
+                <Image src="https://miro.medium.com/max/432/1*IPEsgX_bZKP_7OubdnI7-Q.png" width="216px" height="36px" />
                 {/* <Image src="https://medium.com/icons/monogram-mask.svg" style={{width: "35px", height: "35px"}} /> */}
-                </Menu.Item>    
+                </Menu.Item>
+                <Menu.Item>
+                    MISSION ORIGINALS
+                </Menu.Item> 
+                <Menu.Item fitted>
+                    |
+                </Menu.Item>
+                <Menu.Item>
+                    SUBSCRIBE
+                </Menu.Item>
                 <Menu.Menu position='right'>
-                <Menu.Item>
-                <Icon name="search"/>
-                </Menu.Item>
-                <Menu.Item>
-                <Icon name="bell"/>
-                </Menu.Item>
-                <Menu.Item>
-                    <Registration />
-                </Menu.Item>
-                <Menu.Item>
-                    <Dropdown trigger={trigger} options={options}/>
-                </Menu.Item>
                 </Menu.Menu>  
             </Menu>
             </Container>
+            </div>
             ); 
     }
 }

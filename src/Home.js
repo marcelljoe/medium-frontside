@@ -56,10 +56,10 @@ export default class Home extends Component {
                 <HomeHeader/>
                 <Container>
             <div style={{position: "sticky", top:"0", backgroundColor: "white", zIndex: "1"}}>
-            <Container>
-                    <Menu secondary style={{overflowX: "scroll"}}>
+            <Container fluid>
+                    <Menu secondary floated style={{overflowX: "hidden"}}>
                         {Items.map((MenuItem, i) =>(
-                            <Link to={MenuItem.url}><Menu.Item key={i} name={MenuItem.name} active={activeItem===(MenuItem.name)} onClick={this.handleItemClick}></Menu.Item></Link>
+                            <Link to={MenuItem.url}><Menu.Item stretched key={i} name={MenuItem.name} active={activeItem===(MenuItem.name)} onClick={this.handleItemClick}></Menu.Item></Link>
                         ))}
                     </Menu>                
             </Container>

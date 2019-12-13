@@ -127,10 +127,8 @@ Visit Nakatani’s <u>“Mysterious iPhone Wallpaper” website</u> to explore t
                 </Grid.Row>
             </Grid>
             </Container>
-            <div style={{boxShadow: '0px -1px 0px rgba(0, 0, 0, .1)'}}>
+            
                     <Footer/>
-                </div>
-
             </div>
 
 

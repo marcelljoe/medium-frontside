@@ -53,23 +53,13 @@ import { Component } from "react";
         }, 
         {
             id: '11',
-            name:'MODUS',
+            name:'MODELLING',
             url: '/Home'
         },
         {
             id: '12',
-            name:'LOGIN',
+            name:'MORE',
             url: '/Login'
-        },
-        {
-            id: '13',
-            name:'REGISTER',
-            url: '/Registration'
-        },
-        {
-            id: '14',     
-            name:'ANOTHER CAT',
-            url: '/Home'
         }]
 
 export default Items;

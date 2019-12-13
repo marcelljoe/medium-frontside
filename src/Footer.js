@@ -2,11 +2,12 @@ import _ from 'lodash';
 import faker from 'faker';
 import React, {Component, createRef} from 'react';
 import {FaBell, FaSearch, FaUserCircle} from 'react-icons/fa';
-import {Segment, Rail, Ref, Sticky, Item, Divider, Dropdown, Trigger, Container, Menu, Form, Input, Grid, Image, Button, Header, Icon, Modal, SegmentInline} from 'semantic-ui-react';
+import {Container, Menu} from 'semantic-ui-react';
 
 export default class Footer extends Component {
     render(){
         return(
+            <div style={{boxShadow: '0px -1px 0px rgba(0, 0, 0, .1)'}}>
             <Container>
             <Menu secondary>
                 <Menu.Menu position='right'>
@@ -25,6 +26,7 @@ export default class Footer extends Component {
                 </Menu.Menu>  
             </Menu>
             </Container>
+            </div>
             ); 
     }
 }

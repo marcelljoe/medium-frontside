@@ -8,6 +8,7 @@ import Home from './Home';
 import Login from './Login';
 import OZCategory from './OZCategory';
 import CMTCategory from './CMTCategory';
+import Article from './Article';
 
 export default class App extends Component {
   render(){
@@ -15,13 +16,13 @@ export default class App extends Component {
 
     <Router>
       <div>
-        <Route exact path="/" component={OZCategory} />
+        <Route exact path="/" component={Article} />
         <Route path="/OZCategory" component={OZCategory} />
         <Route path="/Login" component={Login} />
         <Route path="/Home" component={Home} />
         <Route path="/Registration" component={Registration}/>
         <Route path="/CMTCategory" component={CMTCategory}/>
-        
+        <Route path="/Article" component={Article}/>
       </div>
     </Router>
       // <div>  

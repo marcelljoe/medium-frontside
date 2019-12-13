@@ -71,7 +71,7 @@ export default class Login extends Component{
     render(){
         return (
             
-            <Modal trigger={<Button floated="right">Login</Button>} size="small" closeIcon>
+            <Modal trigger={<a href="###">Login</a>} size="small" closeIcon>
                 <div class="ui form">
                     <br/>
                         <div align="center">

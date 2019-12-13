@@ -46,7 +46,7 @@ export default class Registration extends Component{
                             <Button color="black" size="small">Register</Button>
                         </Form.Field>
                         <Form.Field align="center">
-                            <h4>Already have an Account? <a href="/Login">Sign In</a></h4>
+                            <h4>Already have an Account? <Login/></h4>
                             <h4>To make Medium work, we log user data and share it with service providers. Click “Sign Up” above to accept Medium’s<a href="###">Terms of Service</a>&<a href="###">Privacy Policy</a></h4>
                         </Form.Field>
                         </Form>
