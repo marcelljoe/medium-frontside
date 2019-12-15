@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Container, Menu, Icon, Dropdown, Item, Image} from "semantic-ui-react";
+import {Container, Menu, Icon, Dropdown, Item, Image, Button} from "semantic-ui-react";
 import Registration from "./Registration";
 import {Link} from "react-router-dom";
 import Avatar from "react-avatar";
@@ -50,14 +50,19 @@ export default class NSHeader extends Component {
             { key: "mus", text: "Manage unlisted setting"},
             { key: "cfi", text: "Change featured image"},
             { key: "cdt", text: "Change display title / subtitle"},
-            {}
-                
-            
+            { key: "ct", text: "Change tags"},
+            { key: "srh", text: "See revision history"},
+            { key: "ms", text: "More settings"},
+            <Dropdown.Divider/>,
+            { key: "hks", text: "Hints and keyboard shortcuts"},
+            { key: "mh", text: "More help"}
         ]
 
         const DropdownTriggerExample = () => (
             <Dropdown fluid trigger={trigger} options={options} />
         )
+
+        const menuTrigger = (<Icon name="ellipsis horizontal"/>)
 
         const trigger = (
             <Avatar name="Marcell Joe" size="40px" round="20px" />
@@ -69,7 +74,19 @@ export default class NSHeader extends Component {
                         {/* <Header as='h1' style={{ marginLeft: "0px" }}>Medium</Header> */}
                         <Link to="/"><Image src="https://medium.com/icons/monogram-mask.svg" style={{ width: "35px", height: "35px" }} /></Link>
                     </Menu.Item>
+                    <Menu.Item>
+                        <p>Draft</p>
+                    </Menu.Item>
+                    <Menu.Item>
+                        <p>Saved</p>
+                    </Menu.Item>
                     <Menu.Menu position='right'>
+                        <Menu.Item>
+                             <Button size="mini" color="green">Publish</Button>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <Dropdown trigger={menuTrigger} options={NSOptions} icon={null} />
+                        </Menu.Item>
                         <Menu.Item>
                             <Icon name="bell" />
                         </Menu.Item>
