@@ -4,7 +4,6 @@ import HomeHeader from './HomeHeader';
 import {Icon, Divider, Grid, Item, Image, Button, Container, Header, Menu} from 'semantic-ui-react';
 import Avatar from 'react-avatar';
 import { FaRegIdBadge } from 'react-icons/fa';
-import Footer from './Footer';
 
 
 export default class Article extends Component {
