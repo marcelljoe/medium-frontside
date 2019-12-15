@@ -10,19 +10,21 @@ import OZCategory from "./OZCategory";
 import CMTCategory from "./CMTCategory";
 import Article from "./Article";
 import Responses from "./Responses";
+import NSHeader from "./NSHeader";
 
 export default class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Responses} />
+          <Route exact path="/" component={NSHeader} />
           <Route path="/OZCategory" component={OZCategory} />
           <Route path="/Login" component={Login} />
           <Route path="/Home" component={Home} />
           <Route path="/Registration" component={Registration} />
           <Route path="/CMTCategory" component={CMTCategory} />
           <Route path="/Article" component={Article} />
+          <Route path="/Responses" component={Responses}/>
         </div>
       </Router>
     );

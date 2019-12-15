@@ -42,6 +42,19 @@ export default class Responses extends Component {
             <Grid centered>
             <Grid.Column width="10">
                 <Header as="h4">Responses</Header>
+                <Grid.Row>
+                  <Segment>
+                    <Item.Group>
+                      <Item>
+                        <Avatar name="Lola Zieta" size={40} round="20px" align="left" style={{ marginRight: '10px' }} />
+                        <Item.Content>
+                            <Input fluid placeholder="Write a response..."/>                         
+                        </Item.Content>
+                      </Item>
+                    </Item.Group>
+                  </Segment>
+                  <div style={{ paddingBottom: '5px' }}></div>
+                </Grid.Row>
               <Grid.Row>
                 <Segment>
                   <Item.Group>
