@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import NSHeader from './NSHeader';
-import {Container, Grid, Icon, Item, Input, Button, Divider} from "semantic-ui-react";
+import {Container, Grid, Icon, Item, Input, Button, Form, Divider, TextArea} from "semantic-ui-react";
 
 export default class NewStory extends Component {
     render(){
@@ -31,7 +31,7 @@ export default class NewStory extends Component {
                                             <Button basic size="mini" circular style={{ verticalAlign: "middle", paddingRight:"0px" }}><Icon name="plus circle" size="big" /></Button>
                                         </div>
                                         <Item.Content verticalAlign="middle">
-                                            <Input fluid placeholder="Title" />
+                                            <Form><TextArea fluid placeholder="Title" /></Form>
                                         </Item.Content>
                                     </Item>
                                 </Item.Group>

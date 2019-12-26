@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Registration from "./Registration";
@@ -10,21 +9,33 @@ import CMTCategory from "./CMTCategory";
 import Article from "./Article";
 import Responses from "./Responses";
 import NewStory from "./NewStory";
+import Stories from "./Stories"
+import Stats from "./Stats";
+import Bookmarks from "./Bookmarks";
+import Profile from "./Profile";
+import ArticleByPerson from "./ArticleByPerson";
+
 
 export default class App extends Component {
   render() {
     return (
+      
       <Router>
         <div>
-          <Route exact path="/" component={NewStory} />
-          <Route path="/OZCategory" component={OZCategory} />
-          <Route path="/Login" component={Login} />
-          <Route path="/Home" component={Home} />
-          <Route path="/Registration" component={Registration} />
-          <Route path="/CMTCategory" component={CMTCategory} />
-          <Route path="/Article" component={Article} />
-          <Route path="/Responses" component={Responses}/>
-          <Route path="/NewStory" component={NewStory}/>
+          <Route exact path="/" component={Home} />
+          <Route path="/category/:id/articles" component={OZCategory} />
+          <Route path="/login" component={Login} />
+          <Route path="/home" component={Home} />
+          <Route path="/registration" component={Registration} />
+          <Route path="/cmtcategory" component={CMTCategory} />
+          <Route path="/article/:id" component={Article} />
+          <Route path="/responses" component={Responses}/>
+          <Route path="/newstory" component={NewStory}/>
+          <Route path="/stories" component={Stories}/>
+          <Route path="/stats" component={Stats}/>
+          <Route path="/bookmarks" component={Bookmarks}/>
+          <Route path="/profile" component={Profile}/>
+          <Route path="/profile" component={ArticleByPerson}/>
         </div>
       </Router>
     );
