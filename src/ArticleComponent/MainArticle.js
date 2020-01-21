@@ -7,10 +7,24 @@ import ReactHtmlParser, {
   convertNodeToElement,
   htmlparser2
 } from "react-html-parser";
+import Axios from "axios";
 
 
 
 export default class MainArticle extends Component {
+    // constructor(){
+    //     super()
+    //     this.state = {
+    //         comments: []
+    //     }
+    // }
+
+    // componentDidMount(){
+    //     const {id} = this.props.match.params;
+    //     Axios.get(`http://localhost:4000/api/v1/article/${id}/comments`);
+    // }
+
+
   render() {
 
 
@@ -152,7 +166,7 @@ This originally appeared on Thought Catalog.</p>
                         </Item>
                         <Divider/>
                         <Item >
-                            <Button basic fluid color="green"><Link to="/responses">See responses (216)</Link></Button>
+                            <Button basic fluid color="green"><Link to={`/article/${this.props.index}/comments`}>See responses (216)</Link></Button>
                             </Item>     
                 </Item.Group> 
                     </Grid.Column>

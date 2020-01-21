@@ -106,7 +106,7 @@ class Home extends Component {
                   zIndex: "1"
                 }}
               >
-                <Menu secondary floated style={{ overflowX: "hidden", backgroundColor: "white" }}>
+                <Menu secondary style={{ overflowX: "hidden", backgroundColor: "white" }}>
                   <Link to={`/`}>
                     <Menu.Item
                       stretched
@@ -242,7 +242,7 @@ class Home extends Component {
                           <Header as="h3">Latest Articles on Medium</Header>
                           {this.props.articlesL.map((item, index) => (
                             <Link
-                              to={`category/${item.category.id}/article/${item.id}`}
+                              to={`article/${item.id}`}
                             >
                               <HomePopular
                                 index={index}

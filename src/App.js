@@ -7,7 +7,7 @@ import Login from "./Login";
 import OZCategory from "./OZCategory";
 import CMTCategory from "./CMTCategory";
 import Article from "./Article";
-import Responses from "./Responses";
+import Responses from "./ArticleComponent/Responses";
 import NewStory from "./NewStory";
 import Stories from "./Stories"
 import Stats from "./Stats";
@@ -28,14 +28,14 @@ export default class App extends Component {
           <Route path="/home" component={Home} />
           <Route path="/registration" component={Registration} />
           <Route path="/cmtcategory" component={CMTCategory} />
-          <Route path="/article/:id" component={Article} />
-          <Route path="/responses" component={Responses}/>
+          <Route exact path="/article/:id" component={Article} />
+          <Route path="/article/:id/comments" component={Responses}/>
           <Route path="/newstory" component={NewStory}/>
           <Route path="/stories" component={Stories}/>
           <Route path="/stats" component={Stats}/>
           <Route path="/bookmarks" component={Bookmarks}/>
           <Route path="/profile" component={Profile}/>
-          <Route path="/profile" component={ArticleByPerson}/>
+          <Route path="/person" component={ArticleByPerson}/>
         </div>
       </Router>
     );
